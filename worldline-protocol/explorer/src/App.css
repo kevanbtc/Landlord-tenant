@@ -1,0 +1,124 @@
+.app {
+  display: flex;
+  height: 100vh;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-right: 1px solid #333;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 60px;
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.worldline-card {
+  border: 1px solid #333;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+}
+
+.worldline-card h3 {
+  margin-top: 0;
+}
+
+.phase-timeline {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.phase-point {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #007bff;
+}
+
+.entanglement-graph {
+  border: 1px solid #333;
+  height: 400px;
+  margin: 20px 0;
+  background-color: #1e1e1e;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1e1e1e;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #333;
+}
+
+pre {
+  background-color: #1e1e1e;
+  padding: 10px;
+  border: 1px solid #333;
+  overflow-x: auto;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #333;
+  padding: 8px;
+  margin: 5px;
+}
+
+select {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #333;
+  padding: 8px;
+  margin: 5px;
+}

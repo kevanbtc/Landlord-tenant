@@ -1,0 +1,9 @@
+﻿{
+    "lastBlock":  {
+                      "IsPowerOfTwo":  false,
+                      "IsZero":  false,
+                      "IsOne":  false,
+                      "IsEven":  true,
+                      "Sign":  1
+                  }
+}

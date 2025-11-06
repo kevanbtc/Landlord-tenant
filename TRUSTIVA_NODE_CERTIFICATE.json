@@ -1,0 +1,13 @@
+﻿{
+    "issuer":  "Trustiva Global Systems",
+    "api_address":  "127.0.0.1:5201",
+    "issued_utc":  "2025-10-15 10:30:30Z",
+    "gateway_address":  "127.0.0.1:8082",
+    "ipfs_path":  "C:\\Users\\Kevan\\.ipfs_trustiva",
+    "peer_id":  "12D3KooWKyBCsVMraCFBvUmhU9p6h3DVpGsKxAwsnbdXgTbaspjP",
+    "node_label":  "Trustiva Node",
+    "linked_network":  "Unykorn Sovereign L1",
+    "public_key":  "CAESIJbWs0TNFb7WvftX+LQR48aO7ytrT6XgwlA5Lwrg6w9W",
+    "organization_unit":  "Trustiva RWA and Stablecoin Infrastructure",
+    "certificate_type":  "SOVEREIGN_NODE_CERTIFICATE"
+}

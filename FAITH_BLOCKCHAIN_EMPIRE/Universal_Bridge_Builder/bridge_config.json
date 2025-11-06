@@ -1,0 +1,66 @@
+{
+  "bridges": [
+    {
+      "chain": "Ethereum",
+      "chainId": 1,
+      "rpc": "https://eth.llamarpc.com",
+      "bridgeContract": "0x...",
+      "minAmount": "0.01",
+      "maxAmount": "1000",
+      "fee": 30
+    },
+    {
+      "chain": "Polygon",
+      "chainId": 137,
+      "rpc": "https://polygon-rpc.com",
+      "bridgeContract": "0x...",
+      "minAmount": "1",
+      "maxAmount": "100000",
+      "fee": 20
+    },
+    {
+      "chain": "BSC",
+      "chainId": 56,
+      "rpc": "https://bsc-dataseed.binance.org",
+      "bridgeContract": "0x...",
+      "minAmount": "0.01",
+      "maxAmount": "10000",
+      "fee": 25
+    },
+    {
+      "chain": "Avalanche",
+      "chainId": 43114,
+      "rpc": "https://api.avax.network/ext/bc/C/rpc",
+      "bridgeContract": "0x...",
+      "minAmount": "1",
+      "maxAmount": "50000",
+      "fee": 30
+    },
+    {
+      "chain": "Arbitrum",
+      "chainId": 42161,
+      "rpc": "https://arb1.arbitrum.io/rpc",
+      "bridgeContract": "0x...",
+      "minAmount": "0.01",
+      "maxAmount": "10000",
+      "fee": 15
+    },
+    {
+      "chain": "Optimism",
+      "chainId": 10,
+      "rpc": "https://mainnet.optimism.io",
+      "bridgeContract": "0x...",
+      "minAmount": "0.01",
+      "maxAmount": "10000",
+      "fee": 15
+    }
+  ],
+  "relayers": [
+    "0xdcc03ea6a5bE3A2fB51e05cb9F25e9AD034b0a42"
+  ],
+  "security": {
+    "multiSigRequired": true,
+    "zkProofsEnabled": true,
+    "quantumSafe": true
+  }
+}

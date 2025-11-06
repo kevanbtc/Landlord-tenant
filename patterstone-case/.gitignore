@@ -6,10 +6,16 @@ pnpm-lock.yaml
 
 # Environment variables
 .env
+.env.*
+*.env
+**/.env
 .env.local
 .env.*.local
 .env.production
 .env.development
+
+# Private development stack (contains secrets)
+private-dev-stack/
 
 # Logs
 *.log

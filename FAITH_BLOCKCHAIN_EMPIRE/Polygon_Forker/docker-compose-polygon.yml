@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  faith-polygon:
+    image: maticnetwork/bor:latest
+    container_name: faith-polygon-bor
+    command:
+      - server
+      - --chain=faith-polygon
+      - --syncmode=full
+      - --http
+      - --http.addr=0.0.0.0
+      - --http.port=8545
+      - --http.api=eth,net,web3,txpool,bor
+      - --ws
+      - --ws.addr=0.0.0.0
+      - --ws.port=8546
+    ports:
+      - "8545:8545"
+      - "8546:8546"
+      - "30303:30303"
+    volumes:
+      - ./faith-polygon-data:/data
+    environment:
+      - CHAIN_ID=32000002
+      - RWA_MODE=enabled
+      - GASLESS=true
+
+  faith-heimdall:
+    image: maticnetwork/heimdall:latest
+    container_name: faith-polygon-heimdall
+    command:
+      - start
+      - --home=/heimdall-home
+    ports:
+      - "26657:26657"
+      - "1317:1317"
+    volumes:
+      - ./faith-heimdall-data:/heimdall-home
+
+# FAITH-POLYGON - RWA-OPTIMIZED SIDECHAIN
+# Launch: docker-compose up -d
+# RPC: http://localhost:8545
+# ChainID: 32000002

@@ -1,0 +1,15 @@
+- [x] Edit ../.continue/config.yaml to add Ollama models with provider: ollama and apiBase: http://localhost:11434
+- [x] Remove extraneous Hugging Face code from the end of config.yaml
+- [x] Add key Ollama models like qwen2.5-coder:latest, deepseek-coder-v2:latest, llama3.2:latest
+- [ ] Test configuration by ensuring Ollama is running and verifying in VSCode
+- [x] New repo: worldline-protocol (add WORLDLINE_SPEC.md, Solidity interfaces, minimal WorldlineRegistryV1.sol, WorldlineClassRegistry.sol, Foundry tests)
+- [ ] New repo or folder: worldline-gold-demo (import protocol package, adapter for RWA.GOLD.VAULT_V1, end-to-end tests for vault worldline creation, entanglements, phase transitions)
+- [ ] Simple Indexer + Explorer (one small service + UI, hardcode fake dataset first, then wire on-chain)
+- [x] One-page “Worldline for Architects” PDF/README (problem → model → events → demo)
+- [ ] Implement WorldlineRegistryV1 on Unykorn L1
+- [ ] Apply worldlines to one hard-asset RWA (e.g. gold, energy)
+- [ ] Apply worldlines to one claim / credit RWA (e.g. bankruptcy claim)
+- [ ] Build a minimal Worldline Indexer (Node/TS + DB or The Graph)
+- [ ] Ship a first version of Worldline Explorer
+- [ ] Add a basic AI agent for worldline reasoning (frequency/polarization filters, entanglement invariants)
+- [ ] Extend to ISO / CBDC test integrations

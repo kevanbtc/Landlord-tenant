@@ -1,0 +1,36 @@
+# Faith-Cosmos Configuration
+# Inter-Blockchain Communication (IBC) enabled
+
+chain-id: "faith-cosmos-1"
+keyring-backend: "test"
+output: "json"
+
+# Validators
+validators:
+  - address: cosmosvaloper1faith...
+    moniker: "Faith Validator 1"
+    commission: 0.05
+    
+# IBC Channels
+ibc:
+  enabled: true
+  channels:
+    - chain: "osmosis-1"
+      port: "transfer"
+    - chain: "cosmoshub-4"
+      port: "transfer"
+    - chain: "faith-eth-1"
+      port: "evm-bridge"
+
+# RWA Features
+rwa:
+  enabled: true
+  iso20022: true
+  cbdc_ready: true
+  quantum_safe: true
+  
+# Staking
+staking:
+  bond_denom: "faith"
+  min_stake: "1000000faith"
+  max_validators: 100

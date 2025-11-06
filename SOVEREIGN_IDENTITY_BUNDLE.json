@@ -1,0 +1,7 @@
+﻿{
+    "trustiva_cert_cid":  "\u003cInsert Trustiva CID\u003e",
+    "issued_by":  "Unykorn Global Authority",
+    "issued_utc":  "2025-10-15 10:30:35Z",
+    "bundle":  "Unykorn + Trustiva Sovereign Certificate Pair",
+    "unykorn_cert_cid":  "\u003cInsert Unykorn CID\u003e"
+}

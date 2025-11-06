@@ -1,0 +1,21 @@
+{
+  "name": "Faith-Avalanche-Subnet",
+  "chainId": 32000004,
+  "vmId": "srEXiWaHuhNyGwPUi444Tu47ZEDwxTWrbQiuD7FmgSAQ6X7Dy",
+  "tokenName": "FAITH",
+  "tokenSymbol": "FAITH",
+  "validators": [
+    {
+      "nodeID": "NodeID-Faith1",
+      "weight": 1000000,
+      "address": "0xdcc03ea6a5bE3A2fB51e05cb9F25e9AD034b0a42"
+    }
+  ],
+  "features": {
+    "throughput": "4500 TPS",
+    "finality": "1-2 seconds",
+    "gasless": true,
+    "rwa": true,
+    "quantum": true
+  }
+}

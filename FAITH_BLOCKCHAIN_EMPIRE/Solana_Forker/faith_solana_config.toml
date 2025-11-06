@@ -1,0 +1,29 @@
+# Faith-Solana Validator Configuration
+
+[validator]
+identity = "faith-validator-1.json"
+vote_account = "faith-vote-1.json"
+ledger = "./faith-solana-ledger"
+rpc_port = 8899
+dynamic_port_range = "8000-8020"
+gossip_port = 8001
+enable_rpc_transaction_history = true
+enable_cpi_and_log_storage = true
+
+[features]
+throughput = "65000 TPS"
+finality = "400ms"
+gasless = true
+rwa_compliant = true
+quantum_safe = true
+
+[economics]
+token = "FAITH"
+initial_supply = 1000000000
+inflation_rate = 0.05
+staking_rewards = 0.08
+
+[governance]
+proposal_threshold = 1000000
+voting_period = "3 days"
+execution_delay = "2 days"

@@ -1,0 +1,201 @@
+version: '3.8'
+
+services:
+  # Hyperledger Besu Node
+  besu:
+    build: ./besu-fork
+    ports:
+      - "8545:8545"  # JSON-RPC
+      - "8546:8546"  # WebSocket
+      - "30303:30303"  # P2P
+    volumes:
+      - besu-data:/opt/besu/data
+      - ./configs/besu:/opt/besu/config
+    environment:
+      - BESU_RPC_HTTP_ENABLED=true
+      - BESU_RPC_WS_ENABLED=true
+      - BESU_NETWORK_ID=2023
+      - BESU_GENESIS_FILE=/opt/besu/config/genesis.json
+    networks:
+      - blockchain-network
+    restart: unless-stopped
+
+  # Orion Privacy Manager
+  orion:
+    build: ./orion-fork
+    ports:
+      - "8888:8888"  # Orion API
+    volumes:
+      - orion-data:/opt/orion/data
+      - ./configs/orion:/opt/orion/config
+    environment:
+      - ORION_PUBLICKEYS=/opt/orion/config/publicKeys
+      - ORION_PRIVATEKEYS=/opt/orion/config/privateKeys
+    networks:
+      - blockchain-network
+    depends_on:
+      - besu
+    restart: unless-stopped
+
+  # Chainlink Node
+  chainlink:
+    build: ./chainlink
+    ports:
+      - "6688:6688"  # Chainlink UI
+    volumes:
+      - chainlink-data:/chainlink/data
+      - ./configs/chainlink:/chainlink/config
+    environment:
+      - DATABASE_URL=postgresql://chainlink:password@postgres:5432/chainlink
+      - CHAINLINK_TLS_PORT=0
+      - SECURE_COOKIES=false
+      - ALLOW_ORIGINS=*
+    networks:
+      - blockchain-network
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+  # PostgreSQL for Chainlink
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=chainlink
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=chainlink
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - blockchain-network
+    restart: unless-stopped
+
+  # BlockScout Explorer
+  blockscout:
+    build: ./blockscout-fork
+    ports:
+      - "4000:4000"  # BlockScout UI
+    environment:
+      - ETHEREUM_JSONRPC_VARIANT=besu
+      - ETHEREUM_JSONRPC_HTTP_URL=http://besu:8545
+      - ETHEREUM_JSONRPC_WS_URL=ws://besu:8546
+      - DATABASE_URL=postgresql://blockscout:password@postgres-bs:5432/blockscout
+      - SECRET_KEY_BASE=your-secret-key-base
+    networks:
+      - blockchain-network
+    depends_on:
+      - besu
+      - postgres-bs
+    restart: unless-stopped
+
+  # PostgreSQL for BlockScout
+  postgres-bs:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=blockscout
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=blockscout
+    volumes:
+      - postgres-bs-data:/var/lib/postgresql/data
+    networks:
+      - blockchain-network
+    restart: unless-stopped
+
+  # The Graph Node
+  graph-node:
+    build: ./graph-node-fork
+    ports:
+      - "8000:8000"  # GraphQL endpoint
+      - "8001:8001"  # Admin endpoint
+      - "8020:8020"  # Metrics
+    environment:
+      - postgres_host=postgres-graph
+      - postgres_port=5432
+      - postgres_user=graph
+      - postgres_pass=password
+      - postgres_db=graph
+      - ipfs_host=ipfs
+      - ethereum_rpc_network_default=http://besu:8545
+    networks:
+      - blockchain-network
+    depends_on:
+      - postgres-graph
+      - ipfs
+    restart: unless-stopped
+
+  # PostgreSQL for The Graph
+  postgres-graph:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=graph
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=graph
+    volumes:
+      - postgres-graph-data:/var/lib/postgresql/data
+    networks:
+      - blockchain-network
+    restart: unless-stopped
+
+  # IPFS for The Graph
+  ipfs:
+    image: ipfs/go-ipfs:v0.12.0
+    ports:
+      - "5001:5001"  # IPFS API
+    volumes:
+      - ipfs-data:/data/ipfs
+    networks:
+      - blockchain-network
+    restart: unless-stopped
+
+  # Remix IDE
+  remix:
+    build: ./remix-fork
+    ports:
+      - "8080:8080"  # Remix IDE
+    environment:
+      - REMIX_EXPLORER_URL=http://blockscout:4000
+      - REMIX_CHAIN_ID=2023
+      - REMIX_RPC_URL=http://besu:8545
+    networks:
+      - blockchain-network
+    depends_on:
+      - besu
+      - blockscout
+    restart: unless-stopped
+
+  # Monitoring - Prometheus
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./configs/prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - blockchain-network
+    restart: unless-stopped
+
+  # Monitoring - Grafana
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana-data:/var/lib/grafana
+    networks:
+      - blockchain-network
+    restart: unless-stopped
+
+volumes:
+  besu-data:
+  orion-data:
+  chainlink-data:
+  postgres-data:
+  postgres-bs-data:
+  postgres-graph-data:
+  ipfs-data:
+  grafana-data:
+
+networks:
+  blockchain-network:
+    driver: bridge

@@ -1,0 +1,13 @@
+﻿{
+    "issuer":  "Unykorn Global Finance",
+    "api_address":  "127.0.0.1:5101",
+    "issued_utc":  "2025-10-15 10:30:20Z",
+    "gateway_address":  "127.0.0.1:8081",
+    "ipfs_path":  "C:\\Users\\Kevan\\.ipfs_unykorn",
+    "chain_context":  "Unykorn L1 / ChainID 7777",
+    "peer_id":  "12D3KooWSUGpQo5SnHT8XQsir7CLR4PTti8y6Di4ycZ32RUFpXGy",
+    "node_label":  "Unykorn Root Node (7777)",
+    "public_key":  "CAESIPdxAvuVwUHzlOK5vbt6U1krYBKB1W0eDyBiLTXN19hu",
+    "organization_unit":  "Unykorn Sovereign Infrastructure",
+    "certificate_type":  "SOVEREIGN_NODE_CERTIFICATE"
+}

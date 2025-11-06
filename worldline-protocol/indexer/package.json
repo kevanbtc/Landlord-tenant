@@ -1,0 +1,16 @@
+{
+  "name": "worldline-indexer",
+  "version": "1.0.0",
+  "description": "Indexer for Worldline protocol events",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "ethers": "^6.0.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}

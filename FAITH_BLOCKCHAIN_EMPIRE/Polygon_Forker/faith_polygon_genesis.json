@@ -1,0 +1,16 @@
+{
+  "chainId": 32000002,
+  "name": "Faith-Polygon",
+  "description": "RWA-optimized Polygon sidechain",
+  "consensus": "PoS",
+  "features": {
+    "gasless": true,
+    "rwaCompliant": true,
+    "iso20022": true,
+    "cbdcReady": true,
+    "quantumResistant": true
+  },
+  "validators": [
+    "0xdcc03ea6a5bE3A2fB51e05cb9F25e9AD034b0a42"
+  ]
+}
