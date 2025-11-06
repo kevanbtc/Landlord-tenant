@@ -1,0 +1,222 @@
+{
+  "caseId": "PATTERSTONE-2025-001",
+  "propertyAddress": "3530 Patterstone Drive, Alpharetta, GA 30022",
+  "jurisdiction": "DeKalb County Superior Court, Georgia",
+  "plaintiff": "Yoda Burns",
+  "defendant": "Monisha [Last Name TBD]",
+  "leaseTerms": {
+    "monthlyRent": 3000,
+    "securityDeposit": 3000,
+    "leaseStart": "2024-11-XX",
+    "leaseEnd": "2025-11-XX",
+    "occupants": 2,
+    "unitType": "3-bed/2-bath single family"
+  },
+  "caseMetadata": {
+    "breachOnset": "2025-05-XX (approx.)",
+    "breachType": "Plumbing leak - primary bathroom + secondary bathroom flooding",
+    "damages": "Water damage, mold growth, loss of habitability, 5-month non-response",
+    "totalDamagesDocumented": 50500,
+    "totalDamagesPotential": "75000-150000+",
+    "breachDuration": "May 2025 - September 2025 (approx. 5 months)"
+  },
+  "blockchain": {
+    "network": "Ethereum Mainnet (primary) / Sepolia Testnet (staging)",
+    "contractAddress": "TBD_AFTER_DEPLOYMENT",
+    "deploymentTimestamp": "TBD_AFTER_DEPLOYMENT",
+    "deploymentBlockNumber": "TBD_AFTER_DEPLOYMENT",
+    "blockExplorerUrl": "https://etherscan.io/address/TBD_AFTER_DEPLOYMENT"
+  },
+  "evidence": [
+    {
+      "externalId": "EXH-A-01",
+      "category": "photo",
+      "description": "Water damage - primary bathroom, ceiling leak origin",
+      "ipfsHash": "TBD",
+      "localPath": "evidence/photos/damage_primary_bath_01.jpg",
+      "tags": ["water-damage", "leak", "bathroom", "structural"],
+      "relatedTimelineEntry": "May 2025 - Leak onset",
+      "exhibitLabel": "Exhibit A"
+    },
+    {
+      "externalId": "EXH-A-02",
+      "category": "photo",
+      "description": "Mold growth - primary bathroom wall, 4 weeks post-leak",
+      "ipfsHash": "TBD",
+      "localPath": "evidence/photos/mold_primary_bath_01.jpg",
+      "tags": ["mold", "health-hazard", "negligence", "timeline"],
+      "relatedTimelineEntry": "Mid-June 2025 - Mold visible",
+      "exhibitLabel": "Exhibit A"
+    },
+    {
+      "externalId": "EXH-A-03",
+      "category": "photo",
+      "description": "Secondary bathroom - complete flooding and water damage",
+      "ipfsHash": "TBD",
+      "localPath": "evidence/photos/damage_secondary_bath_01.jpg",
+      "tags": ["water-damage", "secondary-damage", "uninhabitable"],
+      "relatedTimelineEntry": "May 2025 - Secondary bathroom affected",
+      "exhibitLabel": "Exhibit A"
+    },
+    {
+      "externalId": "EXH-B-01",
+      "category": "message",
+      "description": "Text message to landlord - Initial leak report, May 20, 2025",
+      "ipfsHash": "TBD",
+      "localPath": "evidence/messages/initial_leak_report_05_20.txt",
+      "tags": ["notice", "leak-report", "contemporaneous", "proof-of-notice"],
+      "relatedTimelineEntry": "May 20, 2025 - Initial notice sent",
+      "exhibitLabel": "Exhibit B"
+    },
+    {
+      "externalId": "EXH-B-02",
+      "category": "message",
+      "description": "Text message to landlord - Follow-up notice, June 10, 2025",
+      "ipfsHash": "TBD",
+      "localPath": "evidence/messages/followup_notice_06_10.txt",
+      "tags": ["notice", "escalation", "neglect-documentation"],
+      "relatedTimelineEntry": "June 10, 2025 - Escalation notice",
+      "exhibitLabel": "Exhibit B"
+    },
+    {
+      "externalId": "EXH-B-03",
+      "category": "message",
+      "description": "Text message to landlord - Mold hazard alert, June 25, 2025",
+      "ipfsHash": "TBD",
+      "localPath": "evidence/messages/mold_hazard_alert_06_25.txt",
+      "tags": ["notice", "health-hazard", "bad-faith-documentation"],
+      "relatedTimelineEntry": "June 25, 2025 - Mold alert sent",
+      "exhibitLabel": "Exhibit B"
+    },
+    {
+      "externalId": "EXH-C-01",
+      "category": "document",
+      "description": "Signed lease agreement - November 2024 to November 2025",
+      "ipfsHash": "TBD",
+      "localPath": "evidence/documents/lease_agreement_signed.pdf",
+      "tags": ["contract", "habitability-clause", "proof-of-tenancy"],
+      "relatedTimelineEntry": "November 2024 - Lease execution",
+      "exhibitLabel": "Exhibit C"
+    },
+    {
+      "externalId": "EXH-D-01",
+      "category": "financial",
+      "description": "Rent payment records - 12 months, all on-time payments ($36,000 total)",
+      "ipfsHash": "TBD",
+      "localPath": "evidence/financial/rent_payment_history_12mo.pdf",
+      "tags": ["payment-history", "good-faith-tenant", "damages-basis", "no-default"],
+      "relatedTimelineEntry": "Ongoing - Nov 2024 through Sept 2025",
+      "exhibitLabel": "Exhibit D"
+    },
+    {
+      "externalId": "EXH-E-01",
+      "category": "estimate",
+      "description": "Contractor estimate - Plumbing repair + water damage assessment",
+      "ipfsHash": "TBD",
+      "localPath": "evidence/estimates/plumbing_repair_estimate.pdf",
+      "tags": ["damages", "repair-cost", "expert-assessment", "quantification"],
+      "relatedTimelineEntry": "July 2025 - Expert assessment",
+      "exhibitLabel": "Exhibit E"
+    },
+    {
+      "externalId": "EXH-F-01",
+      "category": "report",
+      "description": "Mold inspection report - Health hazard confirmation, August 2025",
+      "ipfsHash": "TBD",
+      "localPath": "evidence/reports/mold_inspection_report_08_2025.pdf",
+      "tags": ["health-hazard", "expert-report", "habitability-violation"],
+      "relatedTimelineEntry": "August 2025 - Professional mold assessment",
+      "exhibitLabel": "Exhibit F"
+    },
+    {
+      "externalId": "EXH-G-01",
+      "category": "timeline",
+      "description": "Master facts timeline - 13 chronological events with dates",
+      "ipfsHash": "TBD",
+      "localPath": "evidence/documents/master_timeline.md",
+      "tags": ["narrative", "chronology", "master-record"],
+      "relatedTimelineEntry": "All events",
+      "exhibitLabel": "Exhibit G"
+    },
+    {
+      "externalId": "EXH-H-01",
+      "category": "law",
+      "description": "Georgia Residential Landlord-Tenant Act violations - Statute analysis",
+      "ipfsHash": "TBD",
+      "localPath": "evidence/documents/georgia_law_violations.md",
+      "tags": ["legal-analysis", "statute-citations", "violations"],
+      "relatedTimelineEntry": "All events",
+      "exhibitLabel": "Exhibit H"
+    },
+    {
+      "externalId": "EXH-I-01",
+      "category": "communication",
+      "description": "Final demand letter - Sent September 15, 2025, unanswered",
+      "ipfsHash": "TBD",
+      "localPath": "evidence/documents/demand_letter_final.pdf",
+      "tags": ["pre-litigation", "notice", "demands", "bad-faith-response"],
+      "relatedTimelineEntry": "September 15, 2025 - Final demand",
+      "exhibitLabel": "Exhibit I"
+    }
+  ],
+  "damageSummary": {
+    "rentAbatement": {
+      "description": "5 months × $3,000/month unhabitable (both bathrooms)",
+      "amount": 15000,
+      "calculation": "5 months * $3000"
+    },
+    "estimatedRepairs": {
+      "description": "Contractor plumbing + water damage remediation",
+      "amount": 21500,
+      "calculation": "Professional estimate TBD"
+    },
+    "securityDeposit": {
+      "description": "Non-return due to landlord breach",
+      "amount": 3000,
+      "calculation": "Original deposit"
+    },
+    "lossOfUse": {
+      "description": "Temporary relocation, hotel, storage during repairs",
+      "amount": 5000,
+      "calculation": "Documented expenses"
+    },
+    "relocationCosts": {
+      "description": "Moving to new residence after constructive eviction",
+      "amount": 2000,
+      "calculation": "Moving company + deposits"
+    },
+    "documentedTotal": 50500,
+    "conservativeEstimate": 50500,
+    "aggressiveEstimate": 75000,
+    "maximumPotential": 150000
+  },
+  "legalClaims": [
+    "Breach of implied warranty of habitability (O.C.G.A. § 44-7-2(b))",
+    "Breach of express contractual duty",
+    "Negligent maintenance (failure to repair known defect)",
+    "Gross negligence (willful indifference to health hazard)",
+    "Constructive eviction (uninhabitable conditions)",
+    "Tortious interference with quiet enjoyment",
+    "Statutory duty violations (Georgia Residential Code HB 404)"
+  ],
+  "deploymentStatus": {
+    "phase": "STAGING",
+    "testnetDeployed": false,
+    "mainnetDeployed": false,
+    "expectedTestnetCost": "FREE (Sepolia faucet)",
+    "expectedMainnetCost": "$100-300 (gas fees)",
+    "nextSteps": [
+      "1. Create web3/PatterstoneCase.sol from provided code",
+      "2. Create web3/deploy.js from provided code",
+      "3. Run: npm install",
+      "4. Configure hardhat.config.js with Sepolia RPC",
+      "5. Run: npx hardhat run web3/deploy.js --network sepolia",
+      "6. Record contract address",
+      "7. Upload evidence files to IPFS, record CIDs",
+      "8. Update this manifest with CIDs and contract address",
+      "9. Register evidence on-chain via registerEvidence()",
+      "10. Deploy to mainnet when satisfied"
+    ]
+  },
+  "notes": "This manifest is the master index for all evidence. IPFS hashes (CIDs) should be populated after files are uploaded to IPFS. Contract address will be populated after deployment. All external IDs (EXH-X-XX) must match evidence_index.md exhibit labels."
+}
