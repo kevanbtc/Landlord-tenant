@@ -1,0 +1,104 @@
+{
+  "name": "tenant-justice-platform",
+  "version": "1.0.0",
+  "description": "The world's most powerful tenant defense system - AI + Blockchain + Legal Intelligence",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    
+    "agent:intake": "node scripts/run-agent.js intake",
+    "agent:legal": "node scripts/run-agent.js legal",
+    "agent:damages": "node scripts/run-agent.js damages",
+    "agent:process": "node scripts/run-agent.js orchestrate",
+    "agent:test": "node scripts/test-agents.js",
+    
+    "blockchain:compile": "cd blockchain && npx hardhat compile",
+    "blockchain:deploy:testnet": "cd blockchain && npx hardhat run scripts/deploy.js --network sepolia",
+    "blockchain:deploy:mainnet": "cd blockchain && npx hardhat run scripts/deploy.js --network mainnet",
+    "blockchain:verify": "cd blockchain && npx hardhat run scripts/verify.js",
+    
+    "legal:seed": "node scripts/seed-legal-database.js",
+    "legal:update": "node scripts/update-legal-codes.js",
+    
+    "db:migrate": "prisma migrate dev",
+    "db:migrate:prod": "prisma migrate deploy",
+    "db:seed": "prisma db seed",
+    "db:studio": "prisma studio",
+    
+    "test": "jest",
+    "test:agents": "jest tests/agents",
+    "test:integration": "jest tests/integration",
+    "test:case": "node scripts/test-case.js",
+    
+    "setup": "node scripts/setup.js"
+  },
+  "keywords": [
+    "tenant-rights",
+    "housing-justice",
+    "legal-tech",
+    "ai",
+    "blockchain",
+    "landlord-tenant",
+    "habitability"
+  ],
+  "author": "Kevan",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "next": "^14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    
+    "@prisma/client": "^5.7.1",
+    "prisma": "^5.7.1",
+    
+    "openai": "^4.20.1",
+    "langchain": "^0.0.212",
+    "langgraph": "^0.0.26",
+    "@pinecone-database/pinecone": "^1.1.2",
+    
+    "ethers": "^6.9.0",
+    "hardhat": "^2.19.2",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "ipfs-http-client": "^60.0.1",
+    "web3.storage": "^4.5.5",
+    
+    "stripe": "^14.9.0",
+    "zod": "^3.22.4",
+    "axios": "^1.6.2",
+    "node-cache": "^5.1.2",
+    "cheerio": "^1.0.0-rc.12",
+    "date-fns": "^3.0.0",
+    
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.1.1",
+    "tailwindcss": "^3.3.6",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.7",
+    "multer": "^1.4.5-lts.1",
+    
+    "pdf-lib": "^1.17.1",
+    "docxtemplater": "^3.42.3",
+    "mammoth": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.0.4",
+    "jest": "^29.7.0",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/jest-dom": "^6.1.5",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

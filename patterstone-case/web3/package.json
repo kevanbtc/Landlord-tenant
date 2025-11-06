@@ -1,0 +1,51 @@
+{
+  "name": "patterstone-case-blockchain",
+  "version": "1.0.0",
+  "description": "Immutable blockchain case file for Yoda Burns v. Monisha - 3530 Patterstone Drive",
+  "main": "index.js",
+  "scripts": {
+    "deploy:testnet": "hardhat run scripts/deploy.js --network sepolia",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network mainnet",
+    "populate": "hardhat run scripts/populate-case.js --network sepolia",
+    "upload-evidence": "node scripts/upload-evidence.js",
+    "seal": "hardhat run scripts/seal-case.js --network sepolia",
+    "verify": "hardhat verify --network sepolia",
+    "test": "hardhat test"
+  },
+  "keywords": [
+    "blockchain",
+    "case-file",
+    "evidence",
+    "ethereum",
+    "immutable",
+    "litigation",
+    "landlord-tenant"
+  ],
+  "author": "Yoda Burns",
+  "license": "MIT",
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@openzeppelin/contracts": "^4.9.3",
+    "dotenv": "^16.3.1",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.17.0",
+    "ipfs-http-client": "^60.0.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.1.2",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^1.1.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.6",
+    "@typechain/ethers-v6": "^0.4.3",
+    "@typechain/hardhat": "^8.0.3",
+    "@types/mocha": "^10.0.10",
+    "chai": "^4.3.7",
+    "ethereum-waffle": "^4.0.10",
+    "ethers": "^5.7.2",
+    "hardhat-gas-reporter": "^1.0.10",
+    "solidity-coverage": "^0.8.16",
+    "ts-node": "^10.9.2"
+  }
+}
