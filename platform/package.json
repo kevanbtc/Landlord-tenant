@@ -55,7 +55,7 @@
     "prisma": "^5.7.1",
     
     "openai": "^4.20.1",
-    "langchain": "^0.0.212",
+    "langchain": "^1.0.3",
     "langgraph": "^0.0.26",
     "@pinecone-database/pinecone": "^1.1.2",
     
@@ -80,8 +80,8 @@
     
     "bcrypt": "^5.1.1",
     "jsonwebtoken": "^9.0.2",
-    "nodemailer": "^6.9.7",
-    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^7.0.10",
+    "multer": "^2.0.2",
     
     "pdf-lib": "^1.17.1",
     "docxtemplater": "^3.42.3",
